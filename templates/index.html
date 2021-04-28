@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <style>
+    .card1-front {background-image: url({{ starting_hand_imgs[0] }});}
+    .card2-front {background-image: url({{ starting_hand_imgs[1] }});}
+    .card3-front {background-image: url({{ starting_hand_imgs[2] }});}
+  </style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>FreeCryptoDaily</title>
+</head>
+
+<body>
+
+<h1>Play Pineapple for Free Crypto!</h1>
+
+<img class="deck1" src="{{ url_for('static', filename='icons/cards/backs/red.png') }}" alt="red-card">
+<img class="deck2" src="{{ url_for('static', filename='icons/cards/backs/red.png') }}" alt="red-card">
+<img class="deck3" src="{{ url_for('static', filename='icons/cards/backs/red.png') }}" alt="red-card">
+
+
+<div id="hole_card1">
+  <div class="card1-inner">
+    <div class="card1-back"></div>
+    <div class="card1-front"></div>
+  </div>
+</div>
+
+<div id="hole_card2">
+  <div class="card2-inner">
+    <div class="card2-back"></div>
+    <div class="card2-front"></div>
+  </div>
+</div>
+
+<div id="hole_card3">
+  <div class="card3-inner">
+    <div class="card3-back"></div>
+    <div class="card3-front"></div>
+  </div>
+</div>
+
+
+<div class='Center' align='center'>
+  <button id="deal-btn" class="btn-bot" onclick="deal(); flip_hole_card1(); flip_hole_card2(); flip_hole_card3();">DEAL</button>
+</div>
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery-3.6.0.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+
+</body>
+</html>
